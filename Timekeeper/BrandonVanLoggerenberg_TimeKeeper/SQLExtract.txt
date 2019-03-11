@@ -1,0 +1,82 @@
+use Master
+go
+
+create database TimeKeeper
+go
+
+use TimeKeeper
+go
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Appointments](
+	[Appointment_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Appointment_Date] [date] NULL,
+	[Appointment_Time] [varchar](50) NULL,
+	[Usernames] [varchar](max) NULL,
+	[Company_IDs] [varchar](max) NULL,
+	[Appointment_Header] [varchar](500) NULL,
+	[Appointment_Description] [varchar](1000) NULL,
+	[Expected_Duration] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Appointment_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[AppointmentsUsers](
+	[Appointment_ID] [int] NULL,
+	[Username] [varchar](50) NULL,
+	[Accepted] [bit] NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Users](
+	[UserID] [int] IDENTITY(1,1) NOT NULL,
+	[Username] [varchar](50) NULL,
+	[Password] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+

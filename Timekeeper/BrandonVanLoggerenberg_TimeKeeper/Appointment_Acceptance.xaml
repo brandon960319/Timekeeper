@@ -1,0 +1,59 @@
+﻿<Window x:Class="BrandonVanLoggerenberg_TimeKeeper.Appointment_Acceptance"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrandonVanLoggerenberg_TimeKeeper"
+        mc:Ignorable="d"
+        Title="New Appointments" Height="355" Width="650" Loaded="Window_Loaded" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid Name="MainGrid">
+        <Grid  Name="AppointmentsHeader" Width="650" Height="25"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0">
+            <Label Content="Appointment Acceptance" Name="AppointmentsHeaderLabel" Width="150" Height="25" Margin="166,-4,174,4"/>
+        </Grid>
+
+        <Grid  Name="AppointmentsContent" Width="430" Height="330"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,25,0,0">
+            <Grid Name="AppointmentsContainer" >
+                <Border Margin="0,-30,0,0" BorderBrush="Black" BorderThickness="1" CornerRadius="1" Width="420" Height="300" Name="stackpanel_TimeLineBorder">
+
+                    <ScrollViewer CanContentScroll="True">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="300" Orientation="Vertical" Width="420"  Name="Stackpanel_TimeLine"  >
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+
+            <Button Name="button_Reject"  Content="Reject" Width="75" Height="25" Margin="-150,305,0,0" Click="button_Reject_Click"/>
+            <Button Name="button_Reject_All" Content="Reject All" Width="75" Height="25" Margin="-340,305,0,0" Click="button_Reject_All_Click"/>
+            <Button Name="button_Accept"  Content="Accept" Width="75" Height="25" Margin="150,305,0,0" Click="button_Accept_Click"/>
+            <Button Name="button_Accept_All"  Content="Accept All" Width="75" Height="25" Margin="340,305,0,0" Click="button_Accept_All_Click"/>
+           
+        </Grid>
+
+        <Grid Name="AppointmentsHeader_Details" Width="210" Height="25"  HorizontalAlignment="left" VerticalAlignment="Top" Margin="435,25,0,0">
+            <Label Name="AppointmentsHeader_DetailsLabel" Content="test" Width="150" />
+        </Grid>
+
+        <Grid Margin="435,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="210" Height="300" Name="GridAppointmentDetails">
+            <Label Margin="44,-5,0,0" x:Name="label_AppointmentHeader" Content="Appointment Header :" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_AppointmentHeader" HorizontalAlignment="Left" Height="23" Margin="11,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="191" IsReadOnly="True"/>
+
+            <Label Margin="35,40,0,0" x:Name="label_AppointmentDescription" Content="Appointment Description :" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_AppointmentDescription" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" SpellCheck.IsEnabled="True" HorizontalAlignment="Left" Height="97" Margin="10,60,0,0" VerticalAlignment="Top" Width="191" IsReadOnly="True"/>
+
+            <Label Margin="70,155,0,0" x:Name="label_Attendees" Content="Attendees :" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+            <Grid Width="200" Margin="5,175,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Border BorderBrush="Black" BorderThickness="1" CornerRadius="1" Name="stackpanel_AttendeesBorder">
+                    <ScrollViewer CanContentScroll="True">
+                        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="90" Orientation="Vertical" Width="190"  Name="Stackpanel_Attendees"  >
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+            <Button Name="button_Cancel" Content="Cancel" Width="55" Height="25" Margin="-150,275,0,0" Click="button_Cancel_Click"/>
+            <Button Name="button_Finish" Content="Finish" Width="55" Height="25" Margin="150,275,0,0" Click="button_Finish_Click"/>
+        </Grid>
+    </Grid>
+</Window>

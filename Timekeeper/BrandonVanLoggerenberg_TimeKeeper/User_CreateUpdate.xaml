@@ -1,0 +1,29 @@
+﻿<Window x:Class="BrandonVanLoggerenberg_TimeKeeper.User_CreateUpdate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrandonVanLoggerenberg_TimeKeeper"
+        mc:Ignorable="d"
+        Title="Timekeeper User" Height="194.584" Width="320.291" ResizeMode="NoResize" Closed="Window_Closed">
+    <Grid Name="MainGrid" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid Name="HeaderGrid" Width="275" Height="25" Margin="20,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Label x:Name="label_Header" HorizontalAlignment="Left" Height="25" Margin="100,0,0,0" VerticalAlignment="Top"/>
+        </Grid>
+
+
+        <Grid Margin="20,30,10,13" Name="UserGrid" Height="120" Width="275">
+            <Label x:Name="label_username" Content="Username :" HorizontalAlignment="Left" Margin="-1,5,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_username" HorizontalAlignment="Left" Height="23" Margin="70,8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="textBox_username_TextChanged" />
+
+            <Label x:Name="label_password" Content="Password :" HorizontalAlignment="Left" Margin="-1,41,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_password" HorizontalAlignment="Left" Height="23" Margin="70,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+
+            <Button x:Name="button_Create" Content="" HorizontalAlignment="Left" Height="29" Margin="172,75,0,0" VerticalAlignment="Top" Width="64" Click="button_Create_Click"/>
+            <Button x:Name="button_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="29" Margin="31,75,0,0" VerticalAlignment="Top" Width="64" Click="button_Cancel_Click"/>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

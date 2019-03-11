@@ -1,0 +1,34 @@
+﻿<Window x:Class="BrandonVanLoggerenberg_TimeKeeper.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrandonVanLoggerenberg_TimeKeeper"         
+        mc:Ignorable="d"
+        Title="Timekeeper Login"          
+        Height="200" Width="310" Loaded="Window_Loaded" ResizeMode="NoResize" Closed="Window_Closed"  WindowStartupLocation="CenterScreen">
+    <Grid Name="MainGrid">
+
+        <Grid HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Height="120" Width="280" Name="GridLogin">
+            <Label x:Name="label_username" Content="Username :" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_username" HorizontalAlignment="Left" Height="23" Margin="75,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="textBox_username_TextChanged" />
+
+            <Label x:Name="label_password" Content="Password :" HorizontalAlignment="Left" Margin="5,45,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_password" HorizontalAlignment="Left" Height="23" Margin="75,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200"/>
+
+            <Button x:Name="button_Login" Content="Login" HorizontalAlignment="Left" Height="29" Margin="190,80,0,0" VerticalAlignment="Top" Width="64" Click="button_Login_Click"/>
+            <Button x:Name="button_Cancel" Content="Close" HorizontalAlignment="Left" Height="29" Margin="37,80,0,0" VerticalAlignment="Top" Width="64" Click="button_Cancel_Click"/>
+        </Grid>
+        
+        
+        
+        <Expander Name="expander_MoreLess" Header="More" HorizontalAlignment="Left" Height="95" Margin="5,137,0,0" VerticalAlignment="Top" Width="283" Expanded="expander_Expanded" Collapsed="expander_Collapsed" Background="{x:Null}">
+            <Grid>
+                <Label x:Name="label_Register" Content="Register a User" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Foreground="#FF0000FF" MouseEnter="label_Generic_MouseEnter" MouseLeave="label_Generic_MouseLeave"  MouseUp="label_Generic_MouseUp" />
+                <Label x:Name="label_ForgotPassword" Content="Forgot Password" HorizontalAlignment="Left" Margin="11,34,0,0" VerticalAlignment="Top" Foreground="#FF0000FF" MouseEnter="label_Generic_MouseEnter" MouseLeave="label_Generic_MouseLeave" MouseUp="label_Generic_MouseUp" />
+
+            </Grid>
+        </Expander>
+
+    </Grid>
+</Window>
